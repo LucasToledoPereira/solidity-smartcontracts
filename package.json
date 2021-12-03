@@ -1,0 +1,27 @@
+{
+  "name": "solidity-smartcontracts",
+  "version": "1.0.0",
+  "description": "",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.4.0"
+  },
+  "devDependencies": {
+    "@truffle/hdwallet-provider": "^1.6.0",
+    "truffle-plugin-verify": "^0.5.17"
+  },
+  "scripts": {
+    "compile": "truffle compile",
+    "deploy": "truffle migrate",
+    "verify": "truffle run verify $npm_config_CONTRACT_NAME",
+    "deploy:dev": "npm run deploy -- --network=dev",
+    "deploy:ropsten": "npm run deploy -- --network=ropsten",
+    "verify:ropsten": "npm run verify -- --network=ropsten",
+    "deploy:bsc:testnet": "npm run deploy -- --network=bsctestnet",
+    "verify:bsc:testnet": "npm run verify -- --network=bsctestnet"
+  },
+  "author": "",
+  "license": "ISC"
+}
